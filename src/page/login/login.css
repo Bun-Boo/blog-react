@@ -1,0 +1,52 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("https://allimages.sgp1.digitaloceanspaces.com/photographercomvn/2020/11/Tong-hop-cac-mau-background-quang-cao-dep-nhat.jpg");
+  background-size: cover;
+  /* linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ), */
+}
+.loginTitle {
+  font-size: 50px;
+}
+.loginForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.loginForm > label {
+  margin: 10px 0;
+}
+.loginInput {
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+}
+.loginButton {
+  margin-top: 20px;
+  background-color: crimson;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.loginRegisterButton {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: teal;
+  padding: 14px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
