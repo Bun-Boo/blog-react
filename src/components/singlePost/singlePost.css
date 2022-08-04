@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .singlePost {
   flex: 9;
 }
@@ -42,11 +45,53 @@
 }
 .singlePostDesc {
   color: #666;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+}
+.singlePostContent {
+  color: #666;
+  margin-top: 20px;
   font-size: 18px;
   line-height: 26px;
+  font-weight: 400;
 }
-.singlePostDesc::first-letter {
+.singlePostContent::first-letter {
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
+}
+
+.dots-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.dots-loading > div {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(20, 95, 187);
+  margin: 0 1rem;
+  animation: dotLoading 1s forwards infinite linear;
+}
+
+.dots-loading > div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dots-loading > div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.dots-loading > div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes dotLoading {
+  to {
+    opacity: 0;
+  }
 }

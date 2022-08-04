@@ -32,6 +32,9 @@ hr {
   margin-top: 15px;
   cursor: pointer;
 }
+.postTitle:hover {
+  color: crimson;
+}
 .postDate {
   font-family: "Lora", serif;
   font-style: italic;

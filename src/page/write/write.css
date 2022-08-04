@@ -17,7 +17,9 @@
   display: flex;
   align-items: center;
 }
-
+/* .writeFormGroup .writeDesc {
+  height: 100px;
+} */
 .writeIcon {
   width: 25px;
   height: 25px;
@@ -41,7 +43,7 @@
 }
 .writeText {
   font-size: 20px;
-  height: 100vh;
+  height: 100px;
 }
 .writeSubmit {
   position: absolute;

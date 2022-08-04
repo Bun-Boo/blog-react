@@ -1,0 +1,15 @@
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notFound {
+  font-size: 32px;
+  height: calc(100vh - 64px);
+  color: #9097a0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Varela", sans-serif;
+}

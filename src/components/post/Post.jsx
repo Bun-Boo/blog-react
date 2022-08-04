@@ -1,34 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./post.css";
-const Post = () => {
+const Post = ({ post }) => {
   return (
     <div className="post">
-      <img
-        src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/5/26/913299/Ngan-Ha25.jpg"
-        alt=""
-        className="postImage"
-      />
+      {post.imageUrl && (
+        <img src={post.imageUrl} alt="" className="postImage" />
+      )}
 
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">Music</span>
-          <span className="postCat">Life</span>
+          {post.postcats.map((cat, index) => (
+            <span className="postCat" key={index}>
+              {cat}
+            </span>
+          ))}
         </div>
-        <span className="postTitle">Lorem ipsum dolor sit</span>
+        <Link to={`/post/${post.id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr />
-        <span className="postDate">2 hour ago</span>
+        <span className="postDate">{new Date(post.date).toDateString()}</span>
       </div>
 
-      <p className="postDesc">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        veritatis voluptatibus iste quas, quibusdam accusamus facilis itaque
-        ipsa sint suscipit, sapiente tempore a consectetur molestias consequatur
-        eius dignissimos! Dignissimos, molestias! Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Repellendus veritatis voluptatibus iste
-        quas, quibusdam accusamus facilis itaque ipsa sint suscipit, sapiente
-        tempore a consectetur molestias consequatur eius dignissimos!
-        Dignissimos, molestias!
-      </p>
+      <p className="postDesc">{post.description}</p>
     </div>
   );
 };

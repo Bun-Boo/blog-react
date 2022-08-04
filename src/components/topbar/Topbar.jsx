@@ -38,11 +38,13 @@ const Topbar = () => {
       </div>
       <div className="topRight">
         {user ? (
-          <img
-            className="topImage"
-            src="https://cdn.sforum.vn/sforum/wp-content/uploads/2018/11/3-8.png"
-            alt=""
-          />
+          <Link to="/setting">
+            <img
+              className="topImage"
+              src="https://cdn.sforum.vn/sforum/wp-content/uploads/2018/11/3-8.png"
+              alt=""
+            />
+          </Link>
         ) : (
           <ul className="topList">
             <li className="topListItem">

@@ -1,27 +1,27 @@
 .header {
-  margin-top: 60px;
+  margin-top: 10px;
 }
 .headerTitle {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lora", serif;
-  color: rgb(133, 130, 130);
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
 }
 
 .headerTitleSm {
   position: absolute;
-  top: 18%;
+  top: 25%;
   font-size: 20px;
 }
 .headerTitleLg {
   position: absolute;
-  top: 20%;
+  top: 30%;
   font-size: 100px;
 }
 .headerImage {
   width: 100%;
-  height: 450px;
-  margin-top: 80px;
+  height: 500px;
+  margin-top: 20px;
   object-fit: cover;
 }

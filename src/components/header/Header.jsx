@@ -4,13 +4,13 @@ const Header = () => {
   return (
     <div className="header">
       <div className="headerTitle">
-        <span className="headerTitleSm">React & Node</span>
+        <span className="headerTitleSm">Tell me about your story!</span>
         <span className="headerTitleLg">Blog</span>
       </div>
 
       <img
         className="headerImage"
-        src="https://vcdn1-dulich.vnecdn.net/2021/07/16/8-1626444967.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=GfgGn4dNuKZexy1BGkAUNA"
+        src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8&w=1000&q=80"
         alt=""
       />
     </div>

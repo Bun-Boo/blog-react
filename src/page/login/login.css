@@ -30,6 +30,9 @@
   height: 35px;
   border-radius: 10px;
 }
+.loginInput:focus {
+  outline: none;
+}
 .loginButton {
   margin-top: 20px;
   background-color: crimson;
