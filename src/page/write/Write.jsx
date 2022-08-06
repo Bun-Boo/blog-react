@@ -3,7 +3,7 @@ import "./write.css";
 import axios from "axios";
 const Write = () => {
   const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
+  const [description, setDescription] = useState("");
   const [content, setContent] = useState("");
   const [file, setFile] = useState(null);
 
@@ -11,7 +11,7 @@ const Write = () => {
     e.preventDefault();
     const newPost = {
       title,
-      desc,
+      description,
       content,
     };
     if (file) {
@@ -19,7 +19,7 @@ const Write = () => {
       const filename = Date.now() + file.name;
       data.append("name", filename);
       data.append("file", file);
-      newPost.photo = filename;
+      newPost.imageUrl = filename;
       try {
         await axios.post(
           "https://62e229233891dd9ba8e11ef2.mockapi.io/blog",
@@ -28,11 +28,12 @@ const Write = () => {
       } catch (error) {}
     }
     try {
-      const res = axios.post(
+      const res = await axios.post(
         "https://62e229233891dd9ba8e11ef2.mockapi.io/blog",
         newPost
       );
-      window.location.replace("/posts/" + res.data.id);
+      console.log(res);
+      window.location.replace("/post/" + res.data.id);
     } catch (error) {}
   };
   return (
@@ -64,7 +65,7 @@ const Write = () => {
             placeholder="Description for your story!"
             type="text"
             className="writeInput writeText"
-            onChange={(e) => setDesc(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
 
