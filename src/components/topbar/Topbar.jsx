@@ -33,7 +33,19 @@ const Topbar = () => {
               WRITE
             </Link>
           </li>
-          <li className="topListItem">{user && "LOGOUT"}</li>
+          <li className="topListItem">
+            {user && (
+              <Link
+                className="link"
+                to="/login"
+                onClick={() => {
+                  localStorage.clear();
+                }}
+              >
+                LOGOUT
+              </Link>
+            )}
+          </li>
         </ul>
       </div>
       <div className="topRight">

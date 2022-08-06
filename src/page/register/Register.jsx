@@ -6,19 +6,21 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // const res = await axios.post(
-    //   "https://62e229233891dd9ba8e11ef2.mockapi.io/auth",
-    //   {
-    //     username,
-    //     email,
-    //     password,
-    //   }
-    // );
-
-    // localStorage.setItem("user", JSON.stringify(res.data));
-    // res.data && window.location.replace("/login");
+    let account = {
+      username: username,
+      email: email,
+      password: password,
+    };
+    const json = JSON.stringify(account);
+    if (username !== "" && email !== "" && password !== "") {
+      localStorage.setItem("account", json);
+      alert("Sign Up Success");
+      window.location.href = "/login";
+    } else {
+      alert("Vui lòng nhập đầy đủ thông tin !");
+    }
   };
   return (
     <div className="register">
